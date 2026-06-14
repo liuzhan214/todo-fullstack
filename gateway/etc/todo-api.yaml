@@ -1,0 +1,6 @@
+Name: todo-api
+Host: 0.0.0.0
+Port: 20000
+Backend:
+  Endpoints:
+    - backend:20001

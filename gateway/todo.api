@@ -1,0 +1,50 @@
+type Todo {
+	Id            string `json:"id"`
+	Title         string `json:"title"`
+	Completed     bool   `json:"completed"`
+	IsOnlyForTest bool   `json:"is_only_for_test"`
+}
+
+type GetTodosReq {}
+
+type GetTodosResp {
+	Todos []Todo `json:"todos"`
+}
+
+type CreateTodoReq {
+	Title         string `json:"title"`
+	IsOnlyForTest bool   `json:"is_only_for_test"`
+}
+
+type CreateTodoResp {
+	Todo Todo `json:"todo"`
+}
+
+type UpdateTodoReq {
+	Id        string `json:"id"`
+	Title     string `json:"title"`
+	Completed bool   `json:"completed"`
+}
+
+type UpdateTodoResp {}
+
+type DeleteTodoReq {
+	Id string `json:"id"`
+}
+
+type DeleteTodoResp {}
+
+service todo-api {
+	@handler GetTodos
+	get /api/getTodos (GetTodosReq) returns (GetTodosResp)
+
+	@handler CreateTodo
+	post /api/createTodo (CreateTodoReq) returns (CreateTodoResp)
+
+	@handler UpdateTodo
+	post /api/updateTodo (UpdateTodoReq) returns (UpdateTodoResp)
+
+	@handler DeleteTodo
+	post /api/deleteTodo (DeleteTodoReq) returns (DeleteTodoResp)
+}
+

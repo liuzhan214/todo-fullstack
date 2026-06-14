@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+package todo;
+
+option go_package = "./pb";
+
+message Todo {
+    string id = 1;
+    string title = 2;
+    bool completed = 3;
+    bool is_only_for_test = 4;
+}
+
+message GetTodosReq {}
+message GetTodosResp {
+    repeated Todo todos = 1;
+}
+
+message CreateTodoReq {
+    string title = 1;
+    bool is_only_for_test = 2;
+}
+message CreateTodoResp {
+    Todo todo = 1;
+}
+
+message UpdateTodoReq {
+    string id = 1;
+    string title = 2;
+    bool completed = 3;
+}
+message UpdateTodoResp {}
+
+message DeleteTodoReq {
+    string id = 1;
+}
+message DeleteTodoResp {}
+
+service TodoService {
+    rpc GetTodos(GetTodosReq) returns (GetTodosResp);
+    rpc CreateTodo(CreateTodoReq) returns (CreateTodoResp);
+    rpc UpdateTodo(UpdateTodoReq) returns (UpdateTodoResp);
+    rpc DeleteTodo(DeleteTodoReq) returns (DeleteTodoResp);
+}

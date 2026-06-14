@@ -1,0 +1,6 @@
+Name: todo.rpc
+ListenOn: 0.0.0.0:20001
+TodoRedis:
+  Host: redis:6379
+  Type: node
+  Key: ""

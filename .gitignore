@@ -1,0 +1,4 @@
+.openclaude/
+.vscode/
+backend/dist/
+gateway/dist/
