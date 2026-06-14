@@ -135,6 +135,12 @@ cd /Users/liuzhan/full-stack/frontend/todo/gateway
 goctl api go --api todo.api --dir .
 ```
 
+```bash
+# 生成gateway下游依赖backend的代码
+cd /Users/liuzhan/full-stack/frontend/todo/backend
+goctl rpc protoc todo.proto --go_out=./pb --go-grpc_out=./pb --zrpc_out=.
+```
+
 ### 第三步：填充业务逻辑
 - backend/internal/logic/ — 实现 Redis 操作
 - gateway/internal/logic/ — 调用 RPC 方法
@@ -251,5 +257,3 @@ todo-backend (Go-Zero zrpc)
   ▼
 redis-todo (Redis)
 ```
-
-cd /Users/liuzhan/full-stack/frontend/todo/backend && goctl rpc protoc todo.proto --go_out=./pb --go-grpc_out=./pb --zrpc_out=.
