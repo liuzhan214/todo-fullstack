@@ -37,7 +37,7 @@ services:
     build: ./frontend
     container_name: todo-frontend
     ports:
-      - "80:80"
+      - "5173:80"
     depends_on:
       - gateway
     restart: unless-stopped
