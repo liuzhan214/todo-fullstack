@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 750" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#000" flood-opacity="0.08"/>
+    </filter>
+    <linearGradient id="headerGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="1100" height="750" fill="#F3F4F6" rx="16"/>
+
+  <!-- 标题栏 -->
+  <rect x="0" y="0" width="1100" height="80" fill="url(#headerGrad)" rx="16"/>
+  <rect x="0" y="40" width="1100" height="40" fill="url(#headerGrad)"/>
+  <text x="550" y="50" text-anchor="middle" fill="#fff" font-size="24" font-weight="700">📋 Todo App</text>
+
+  <!-- 主卡片 -->
+  <rect x="60" y="100" width="980" height="620" fill="#fff" rx="12" filter="url(#shadow)"/>
+
+  <!-- 左侧面板：标题 + 操作区 -->
+  <text x="100" y="150" font-size="18" font-weight="600" fill="#111">添加新任务</text>
+
+  <!-- 输入框 -->
+  <rect x="100" y="170" width="520" height="46" fill="#F9FAFB" rx="8" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="110" y="198" fill="#9CA3AF" font-size="14">输入任务标题...</text>
+
+  <!-- 添加按钮 -->
+  <rect x="630" y="170" width="120" height="46" fill="#4F46E5" rx="8"/>
+  <text x="690" y="198" text-anchor="middle" fill="#fff" font-size="15" font-weight="600">➕ 添加</text>
+
+  <!-- 分割线 -->
+  <line x1="100" y1="240" x2="980" y2="240" stroke="#E5E7EB" stroke-width="1"/>
+
+  <!-- 区域标题 -->
+  <text x="100" y="278" font-size="18" font-weight="600" fill="#111">任务列表</text>
+  <text x="700" y="278" font-size="14" fill="#6B7280">
+    <tspan xml:space="preserve">
+3 项任务    |    2 项已完成    |    1 项待办
+    </tspan>
+  </text>
+
+  <!-- Todo 项 1 - 已完成 -->
+  <rect x="100" y="300" width="880" height="56" fill="#F9FAFB" rx="8"/>
+  <!-- 勾选按钮 (已选中) -->
+  <circle cx="130" cy="328" r="12" fill="#4F46E5"/>
+  <polyline points="124,328 128,332 136,324" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- 标题 (删除线) -->
+  <text x="155" y="333" font-size="15" fill="#9CA3AF" text-decoration="line-through">买咖啡豆</text>
+  <!-- 标签 -->
+  <rect x="155" y="315" width="60" height="8" fill="#E0E7FF" rx="4"/>
+  <!-- 删除按钮 -->
+  <text x="950" y="333" fill="#EF4444" font-size="14" cursor="pointer">🗑</text>
+
+  <!-- Todo 项 2 - 已完成 -->
+  <rect x="100" y="366" width="880" height="56" fill="#F9FAFB" rx="8"/>
+  <circle cx="130" cy="394" r="12" fill="#4F46E5"/>
+  <polyline points="124,394 128,398 136,390" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="155" y="399" font-size="15" fill="#9CA3AF" text-decoration="line-through">回复邮件</text>
+  <text x="950" y="399" fill="#EF4444" font-size="14" cursor="pointer">🗑</text>
+
+  <!-- Todo 项 3 - 待办 -->
+  <rect x="100" y="432" width="880" height="56" fill="#fff" rx="8" stroke="#E5E7EB" stroke-width="1"/>
+  <circle cx="130" cy="460" r="12" fill="none" stroke="#D1D5DB" stroke-width="2"/>
+  <text x="155" y="465" font-size="15" fill="#111">写周报</text>
+  <!-- 编辑中状态 -->
+  <rect x="155" y="445" width="280" height="30" fill="#fff" rx="4" stroke="#4F46E5" stroke-width="1.5"/>
+  <text x="162" y="465" font-size="13" fill="#111">写周报</text>
+  <rect x="440" y="446" width="50" height="28" fill="#4F46E5" rx="4"/>
+  <text x="465" y="465" text-anchor="middle" fill="#fff" font-size="12" font-weight="600">保存</text>
+  <rect x="495" y="446" width="50" height="28" fill="#E5E7EB" rx="4"/>
+  <text x="520" y="465" text-anchor="middle" fill="#6B7280" font-size="12">取消</text>
+  <text x="950" y="465" fill="#EF4444" font-size="14" cursor="pointer">🗑</text>
+
+  <!-- 分割线 -->
+  <line x1="100" y1="518" width="880" stroke="#E5E7EB" stroke-width="1"/>
+
+  <!-- 过滤器区域 -->
+  <text x="100" y="558" font-size="18" font-weight="600" fill="#111">筛选</text>
+
+  <!-- 筛选按钮行 -->
+  <rect x="100" y="575" width="90" height="36" fill="#4F46E5" rx="8"/>
+  <text x="145" y="598" text-anchor="middle" fill="#fff" font-size="13" font-weight="500">全部</text>
+
+  <rect x="200" y="575" width="90" height="36" fill="#F3F4F6" rx="8"/>
+  <text x="245" y="598" text-anchor="middle" fill="#374151" font-size="13" font-weight="500">待办</text>
+
+  <rect x="300" y="575" width="90" height="36" fill="#F3F4F6" rx="8"/>
+  <text x="345" y="598" text-anchor="middle" fill="#374151" font-size="13" font-weight="500">已完成</text>
+
+  <!-- 清空完成按钮 -->
+  <rect x="800" y="575" width="140" height="36" fill="#FEF2F2" rx="8" stroke="#FEE2E2" stroke-width="1"/>
+  <text x="870" y="598" text-anchor="middle" fill="#EF4444" font-size="13" font-weight="500">🗑 清空已完成</text>
+
+  <!-- 底部备注 -->
+  <text x="100" y="650" fill="#9CA3AF" font-size="12">
+    <tspan xml:space="preserve">
+💡 勾选任务 → 标记完成    |    双击标题 → 进入编辑     |    实时同步到后端
+    </tspan>
+  </text>
+
+  <!-- 右侧：数据流状态面板 -->
+  <rect x="620" y="130" width="380" height="100" fill="#F0FDF4" rx="8" stroke="#DCFCE7" stroke-width="1"/>
+  <text x="640" y="158" font-size="13" fill="#166534" font-weight="600">🟢 数据流状态</text>
+  <text x="640" y="180" font-size="12" fill="#166534">前端 → POST /api/createTodo → Gateway → gRPC → Backend → Redis ✅</text>
+  <text x="640" y="198" font-size="12" fill="#166534">前端 → GET /api/getTodos → Gateway → gRPC → Backend → Redis ✅</text>
+
+  <!-- 响应式说明 -->
+  <rect x="620" y="245" width="380" height="55" fill="#EFF6FF" rx="8" stroke="#DBEAFE" stroke-width="1"/>
+  <text x="640" y="272" font-size="13" fill="#1E40AF" font-weight="600">ℹ 页面交互</text>
+  <text x="640" y="290" font-size="12" fill="#1E40AF">所有操作实时请求后端 API，页面自动刷新</text>
+</svg>
